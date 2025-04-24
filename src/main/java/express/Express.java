@@ -67,8 +67,8 @@ public class Express {
     }
 
     /**
-     *
-     * 该方法仅用于输出选择菜单
+     * 方法名：shouMenu
+     * 该方法用于输出选择菜单
      *
      */
     public static void showMenu() {
