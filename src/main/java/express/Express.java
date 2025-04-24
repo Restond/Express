@@ -1,5 +1,6 @@
 package main.java.express;
 
+import main.java.express.cargohandler.CargoHandler;
 import main.java.express.loginsystem.Login;
 import main.java.express.loginsystem.Register;
 import java.io.IOException;
@@ -49,10 +50,34 @@ public class Express {
 
         } while (!validLogin);
 
-        System.out.println("---运费计算系统---");
-        System.out.println("  1.");
-        System.out.println("  2.");
-        System.out.println("  3.");
-        System.out.println("  4.");
+        boolean validSystem = false;
+        CargoHandler cargoHandler = new CargoHandler();
+
+        while (!validSystem) {
+            showMenu();
+            switch (input.nextInt()) {
+                case 1: cargoHandler.inputData();
+                case 2: cargoHandler.showCharge();
+                case 3:
+                case 0:
+                default: System.out.println("输入错误！"); break;
+            }
+
+        }
+    }
+
+    /**
+     *
+     * 该方法仅用于输出选择菜单
+     *
+     */
+    public static void showMenu() {
+        System.out.println("-----运费计算系统-----");
+        System.out.println("   1.货物数据录入");
+        System.out.println("   2.计算运费");
+        System.out.println("   3.货物信息显示");
+        System.out.println("   0.退出程序");
+
+        System.out.print("\n请输入你的选择: ");
     }
 }
