@@ -101,4 +101,20 @@ public class CargoHandler {
         double charge = computeCharge();
         System.out.println(charge);
     }
+
+    /**
+     *
+     * 方法名：showMessage
+     * 该方法用于显示货物信息
+     *
+     */
+    public void showMessage() {
+        System.out.println(cargo.cargoNumber);
+        System.out.println(cargo.senderName);
+        System.out.println(cargo.senderPhone);
+        System.out.println(cargo.receiverName);
+        System.out.println(cargo.receiverPhone);
+        System.out.println(cargo.receiverAddress);
+        System.out.println(cargo.weight);
+    }
 }

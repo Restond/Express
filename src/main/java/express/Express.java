@@ -58,9 +58,9 @@ public class Express {
             switch (input.nextInt()) {
                 case 1: cargoHandler.inputData();
                 case 2: cargoHandler.showCharge();
-                case 3:
-                case 0:
-                default: System.out.println("输入错误！"); break;
+                case 3: cargoHandler.showMessage();
+                case 0: validSystem = true;
+                default: System.out.println("A error has occurred while cargoSystem"); break;
             }
 
         }
