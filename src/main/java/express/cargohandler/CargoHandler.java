@@ -19,26 +19,34 @@ public class CargoHandler {
         System.out.print("请输入货物编号：");
         cargo.cargoNumber = input.nextLong();
 
-        System.out.print("\n请输入寄件人姓名：");
+        input.nextLine();
+
+        System.out.print("请输入寄件人姓名：");
         cargo.senderName = input.nextLine();
 
-        System.out.print("\n请输入寄件人电话：");
+        System.out.print("请输入寄件人电话：");
         cargo.senderPhone = input.nextLong();
 
-        System.out.print("\n请输入收件人姓名：");
+        input.nextLine();
+
+        System.out.print("请输入收件人姓名：");
         cargo.receiverName = input.nextLine();
 
-        System.out.print("\n请输入收件人电话：");
+        System.out.print("请输入收件人电话：");
         cargo.receiverPhone = input.nextLong();
 
-        System.out.print("\n请输入收件人地址：");
+        input.nextLine();
+
+        System.out.print("请输入收件人地址：");
         cargo.receiverAddress = input.nextLine();
 
-        System.out.print("\n请输入寄送区域（1-5）：");
+        System.out.print("请输入寄送区域（1-5）：");
         destination = input.nextInt();
 
-        System.out.print("\n请输入货物重量（kg）：");
+        System.out.print("请输入货物重量（kg）：");
         cargo.weight = input.nextDouble();
+
+        System.out.println("货物数据录入完毕！");
     }
 
     /**
@@ -99,7 +107,7 @@ public class CargoHandler {
      */
     public void showCharge() {
         double charge = computeCharge();
-        System.out.println(charge);
+        System.out.println("快递运费：" + charge + " 元");
     }
 
     /**
@@ -109,12 +117,12 @@ public class CargoHandler {
      *
      */
     public void showMessage() {
-        System.out.println(cargo.cargoNumber);
-        System.out.println(cargo.senderName);
-        System.out.println(cargo.senderPhone);
-        System.out.println(cargo.receiverName);
-        System.out.println(cargo.receiverPhone);
-        System.out.println(cargo.receiverAddress);
-        System.out.println(cargo.weight);
+        System.out.println("货物编号：" + cargo.cargoNumber);
+        System.out.println("寄件人姓名：" + cargo.senderName);
+        System.out.println("寄件人电话：" + cargo.senderPhone);
+        System.out.println("收件人姓名：" + cargo.receiverName);
+        System.out.println("收件人电话：" + cargo.receiverPhone);
+        System.out.println("收件人地址：" + cargo.receiverAddress);
+        System.out.println("货物重量：" + cargo.weight + " kg");
     }
 }

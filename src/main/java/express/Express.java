@@ -56,10 +56,10 @@ public class Express {
         while (!validSystem) {
             showMenu();
             switch (input.nextInt()) {
-                case 1: cargoHandler.inputData();
-                case 2: cargoHandler.showCharge();
-                case 3: cargoHandler.showMessage();
-                case 0: validSystem = true;
+                case 1: cargoHandler.inputData(); break;
+                case 2: cargoHandler.showCharge(); break;
+                case 3: cargoHandler.showMessage(); break;
+                case 0: validSystem = true; break;
                 default: System.out.println("A error has occurred while cargoSystem"); break;
             }
 
