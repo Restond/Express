@@ -1,14 +1,78 @@
 package main.java.express.cargohandler;
 
 public class Cargo {
-        long cargoNumber;
-        String senderName;
-        long senderPhone;
+        private long cargoNumber;
+        private long senderPhone;
+        private String senderName;
 
-        String receiverAddress;
-        String receiverName;
-        long receiverPhone;
+        private String receiverAddress;
+        private String receiverName;
+        private long receiverPhone;
 
-        double weight;
-        double charge;
+        private double weight;
+        private double charge;
+
+        public long getCargoNumber() {
+                return this.cargoNumber;
+        }
+
+        public long getSenderPhone() {
+                return this.senderPhone;
+        }
+
+        public String getSenderName() {
+                return this.senderName;
+        }
+
+        public String getReceiverAddress() {
+                return this.receiverAddress;
+        }
+
+        public String getReceiverName() {
+                return this.receiverName;
+        }
+
+        public long getReceiverPhone() {
+                return this.receiverPhone;
+        }
+
+        public double getWeight() {
+                return this.weight;
+        }
+
+        public double getCharge() {
+                return this.charge;
+        }
+
+        public void setCargoNumber(long cargoNumber) {
+                this.cargoNumber = cargoNumber;
+        }
+
+        public void setSenderPhone(long senderPhone) {
+                this.senderPhone = senderPhone;
+        }
+
+        public void setSenderName(String senderName) {
+                this.senderName = senderName;
+        }
+
+        public void setReceiverAddress(String receiverAddress) {
+                this.receiverAddress = receiverAddress;
+        }
+
+        public void setReceiverName(String receiverName) {
+                this.receiverName = receiverName;
+        }
+
+        public void setReceiverPhone(long receiverPhone) {
+                this.receiverPhone = receiverPhone;
+        }
+
+        public void setWeight(double weight) {
+                this.weight = weight;
+        }
+
+        public void setCharge(double charge) {
+                this.charge = charge;
+        }
 }
