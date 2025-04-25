@@ -77,12 +77,12 @@ public class Cargo {
         }
 
         public String toString() {
-                return "货物编号：" + this.cargoNumber + ".\n" +
-                       "寄件人姓名：" + this.senderName + ".\n" +
-                       "寄件人电话：" + this.senderPhone + ".\n" +
-                       "收件人姓名：" + this.receiverName + ".\n" +
-                       "收件人电话：" + this.receiverPhone + ".\n" +
-                       "收件人地址：" + this.receiverAddress + ".\n" +
-                       "货物重量：" + this.weight + " kg.\n";
+                return "货物编号：" + this.getCargoNumber() + ".\n" +
+                       "寄件人姓名：" + this.getSenderName() + ".\n" +
+                       "寄件人电话：" + this.getSenderPhone() + ".\n" +
+                       "收件人姓名：" + this.getReceiverName() + ".\n" +
+                       "收件人电话：" + this.getReceiverPhone() + ".\n" +
+                       "收件人地址：" + this.getReceiverAddress() + ".\n" +
+                       "货物重量：" + this.getWeight() + " kg.\n";
         }
 }
