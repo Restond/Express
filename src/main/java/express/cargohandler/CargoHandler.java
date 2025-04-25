@@ -17,34 +17,34 @@ public class CargoHandler {
      */
     public void inputData() {
         System.out.print("请输入货物编号：");
-        cargo.cargoNumber = input.nextLong();
+        cargo.setCargoNumber(input.nextLong());
 
         input.nextLine();
 
         System.out.print("请输入寄件人姓名：");
-        cargo.senderName = input.nextLine();
+        cargo.setSenderName(input.nextLine());
 
         System.out.print("请输入寄件人电话：");
-        cargo.senderPhone = input.nextLong();
+        cargo.setSenderPhone(input.nextLong());
 
         input.nextLine();
 
         System.out.print("请输入收件人姓名：");
-        cargo.receiverName = input.nextLine();
+        cargo.setReceiverName(input.nextLine());
 
         System.out.print("请输入收件人电话：");
-        cargo.receiverPhone = input.nextLong();
+        cargo.setReceiverPhone(input.nextLong());
 
         input.nextLine();
 
         System.out.print("请输入收件人地址：");
-        cargo.receiverAddress = input.nextLine();
+        cargo.setReceiverAddress(input.nextLine());
 
         System.out.print("请输入寄送区域（1-5）：");
         destination = input.nextInt();
 
         System.out.print("请输入货物重量（kg）：");
-        cargo.weight = input.nextDouble();
+        cargo.setWeight(input.nextDouble());
 
         System.out.println("货物数据录入完毕！");
     }
@@ -59,44 +59,44 @@ public class CargoHandler {
     public double computeCharge() {
         switch (destination) {
             case 1:
-                if (cargo.weight <= 1) {
-                    cargo.charge = 10;
+                if (cargo.getWeight() <= 1) {
+                    cargo.setCharge(10);
                 } else {
-                    cargo.charge = ((int)cargo.weight - 1) * 5 + 10;
+                    cargo.setCharge(((int)cargo.getWeight() - 1) * 5 + 10);
                 }
                 break;
             case 2:
-                if (cargo.weight <= 1) {
-                    cargo.charge = 12;
+                if (cargo.getWeight() <= 1) {
+                    cargo.setCharge(12);
                 } else {
-                    cargo.charge = ((int)cargo.weight - 1) * 8 + 10;
+                    cargo.setCharge(((int)cargo.getWeight() - 1) * 8 + 10);
                 }
                 break;
             case 3:
-                if (cargo.weight <= 1) {
-                    cargo.charge = 15;
+                if (cargo.getWeight() <= 1) {
+                    cargo.setCharge(15);
                 } else {
-                    cargo.charge = ((int)cargo.weight - 1) * 10 + 10;
+                    cargo.setCharge(((int)cargo.getWeight() - 1) * 10 + 10);
                 }
                 break;
             case 4:
-                if (cargo.weight <= 1) {
-                    cargo.charge = 18;
+                if (cargo.getWeight() <= 1) {
+                    cargo.setCharge(18);
                 } else {
-                    cargo.charge = ((int)cargo.weight - 1) * 12 + 10;
+                    cargo.setCharge(((int)cargo.getWeight() - 1) * 12 + 10);
                 }
                 break;
             case 5:
-                if (cargo.weight <= 1) {
-                    cargo.charge = 30;
+                if (cargo.getWeight() <= 1) {
+                    cargo.setCharge(30);
                 } else {
-                    cargo.charge = ((int)cargo.weight - 1) * 25 + 10;
+                    cargo.setCharge(((int)cargo.getWeight() - 1) * 25 + 10);
                 }
                 break;
             default: System.out.println("请输入正确的区域编号！"); break;
         }
 
-        return cargo.charge;
+        return cargo.getCharge();
     }
 
     /**
@@ -118,12 +118,12 @@ public class CargoHandler {
      *
      */
     public void showMessage() {
-        System.out.println("货物编号：" + cargo.cargoNumber);
-        System.out.println("寄件人姓名：" + cargo.senderName);
-        System.out.println("寄件人电话：" + cargo.senderPhone);
-        System.out.println("收件人姓名：" + cargo.receiverName);
-        System.out.println("收件人电话：" + cargo.receiverPhone);
-        System.out.println("收件人地址：" + cargo.receiverAddress);
-        System.out.println("货物重量：" + cargo.weight + " kg");
+        System.out.println("货物编号：" + cargo.getCargoNumber());
+        System.out.println("寄件人姓名：" + cargo.getSenderName());
+        System.out.println("寄件人电话：" + cargo.getSenderPhone());
+        System.out.println("收件人姓名：" + cargo.getReceiverName());
+        System.out.println("收件人电话：" + cargo.getReceiverPhone());
+        System.out.println("收件人地址：" + cargo.getReceiverAddress());
+        System.out.println("货物重量：" + cargo.getWeight() + " kg");
     }
 }
