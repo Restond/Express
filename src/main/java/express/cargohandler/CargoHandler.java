@@ -118,6 +118,6 @@ public class CargoHandler {
      *
      */
     public void showMessage() {
-        System.out.println(cargo.toString());
+        System.out.print(cargo.toString());
     }
 }
