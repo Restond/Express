@@ -118,12 +118,6 @@ public class CargoHandler {
      *
      */
     public void showMessage() {
-        System.out.println("货物编号：" + cargo.getCargoNumber());
-        System.out.println("寄件人姓名：" + cargo.getSenderName());
-        System.out.println("寄件人电话：" + cargo.getSenderPhone());
-        System.out.println("收件人姓名：" + cargo.getReceiverName());
-        System.out.println("收件人电话：" + cargo.getReceiverPhone());
-        System.out.println("收件人地址：" + cargo.getReceiverAddress());
-        System.out.println("货物重量：" + cargo.getWeight() + " kg");
+        System.out.println(cargo.toString());
     }
 }
