@@ -76,6 +76,7 @@ public class Cargo {
                 this.charge = charge;
         }
 
+        @Override
         public String toString() {
                 return "货物编号：" + this.getCargoNumber() + ".\n" +
                        "寄件人姓名：" + this.getSenderName() + ".\n" +
